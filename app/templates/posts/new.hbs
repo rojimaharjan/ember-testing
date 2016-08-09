@@ -1,0 +1,13 @@
+{{outlet}}
+
+<h1>welcome</h1>
+{{input class='input-post' value=title}}
+<button class="submit" {{action "doSomething"}}> Submit</button>
+<br>
+{{#if posts.length}}
+	<ul class="posts">
+		{{#each posts as |post|}}
+			<li>{{post.title}}</li>
+		{{/each}}
+	</ul>
+{{/if}}
